@@ -21,9 +21,9 @@ const navItems = [
     name: 'Products',
     dropdown: true,
     subItems: [
-      { path: '/enovowheel/Products/4*4', image: img2 },
-      { path: '/enovowheel/Products/4*2', image: img3 },
-      { path: '/accessories', image: img4 },
+      { path:'/enovowheel/Products/4*4',title:"prouduct 1", image: img2 },
+      { path: '/enovowheel/Products/4*2',tittle:"prouduct 1", image: img3 },
+      { path: '/accessories', tittle:"Accessories", image: img4 },
     ],
   },
   { path: '/accessories', name: 'Accessories' },
@@ -141,7 +141,7 @@ const Navbar = () => {
 
           {/* Contact and Cart + Static User Dropdown */}
           <div className="contact-us flex items-center gap-4 relative">
-            
+
 
             {/* Static dropdown menu */}
             <div className="relative">
@@ -150,7 +150,7 @@ const Navbar = () => {
                 className="flex items-center sec-select"
               >
                 <img src={user} alt="user" className="sel-img" />
-                <ChevronDown size={22} style={{color:"#E9E9E9"}} />
+                <ChevronDown size={22} style={{ color: "#E9E9E9" }} />
               </button>
               <AnimatePresence>
                 {userMenuOpen && (
@@ -180,12 +180,14 @@ const Navbar = () => {
 
 
 
-            <img
-              className="cursor-pointer"
-              src={cart}
-              alt="cart"
-              style={{ width: '32px', height: '32px' }}
-            />
+            <a href='/cart' className='cart-link'>
+              <img
+                className="cart-img cursor-pointer"
+                src={cart}
+                alt="cart"
+                style={{ width: '32px', height: '32px' }}
+              />
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -210,7 +212,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+            <div className="xo px-2 pt-2 pb-3 space-y-1 shadow-lg">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.path}
@@ -257,7 +259,7 @@ const Navbar = () => {
                                   setDropdownOpen(false);
                                 }}
                               >
-                                <img src={sub.image} className="w-5 h-5 rounded-full" />
+                                <img src={sub.image} className="w-10 h-10 rounded-full" />
                                 <span>{item.name}</span>
                               </NavLink>
                             ))}

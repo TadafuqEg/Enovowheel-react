@@ -130,7 +130,7 @@ const ProductTwo = () => {
 
                     <div className="order-now">
                         <div className='buttons'>
-                            <a><button className='btn-1'><img className='im' src={img3} />Order Now</button></a>
+                            <a href='/shopping'><button className='btn-1'><img className='im' src={img3} />Order Now</button></a>
                         </div>
                     </div>
 

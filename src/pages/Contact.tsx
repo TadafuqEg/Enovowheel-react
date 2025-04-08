@@ -19,7 +19,7 @@ const Contact = () => {
           <img className="contact-wheel-img" src={img10} />
           <h5>Four-Wheel Drive</h5>
           <p>Optimize your trip time</p>
-          <a><button><img src={img7} />Order Now</button></a>
+          <a href='/shopping'><button><img src={img7} />Order Now</button></a>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ const Contact = () => {
             <h5>Build Your Scooters</h5>
             <p>By using accessories, you can build a scooter according to the use <br /> that suits you</p>
           </div>
-          <a><button className='btn-3'><img src={img4} />explore more</button></a>
+          <a href='/shopping'><button className='btn-3'><img src={img4} />explore more</button></a>
         </div>
         <div>
           <Tabs />

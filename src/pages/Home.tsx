@@ -31,7 +31,7 @@ const Home = () => {
             <img src={img2} className='bac-1' />
             <p className='p-2'>that takes urban and off road riding to the next level.</p>
             <div className='buttons'>
-              <a><button className='btn-1'><img src={img3} />Order Now</button></a>
+              <a href='/shopping'><button className='btn-1'><img src={img3} />Order Now</button></a>
               <a><button className='btn-2'>Become a Dealer</button></a>
             </div>
           </motion.div>
@@ -56,7 +56,7 @@ const Home = () => {
       <div className='sec-3'>
         <div className='sec3-top'>
           <h5>Revolution Stable and Safety <br /> Mobility</h5>
-          <a><button className='btn-3'><img src={img4} />explore more</button></a>
+          <a href='/shopping'><button className='btn-3'><img src={img4} />explore more</button></a>
         </div>
         <Cursor />
       </div>
@@ -68,7 +68,7 @@ const Home = () => {
             <h5>Our Products</h5>
             <p>Lorem ipsum dolor sit amet consectetur. Massa elit tortor ornare diam vel .</p>
           </div>
-          <a><button className='btn-3'><img src={img4} />explore more</button></a>
+          <a href='/shopping'><button className='btn-3'><img src={img4} />explore more</button></a>
         </div>
         <div className='sec4-bottom'>
           <div className='card-1'>
@@ -133,9 +133,9 @@ const Home = () => {
         <div className='sec3-top'>
           <div>
             <h5>Build Your Scooters</h5>
-            <p>By using accessories, you can build a scooter according to the use <br /> that suits you</p>
+            <p className='sc-p'>By using accessories, you can build a scooter according to the use <br /> that suits you</p>
           </div>
-          <a><button className='btn-3'><img src={img4} />explore more</button></a>
+          <a href='/shopping'><button className='btn-3'><img src={img4} />explore more</button></a>
         </div>
         <div>
           <Tabs />

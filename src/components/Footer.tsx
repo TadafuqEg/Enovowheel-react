@@ -13,9 +13,9 @@ const Footer = () => {
           <div className='Menu'>
             <h5>Menu</h5>
             <ul>
-              <li><a>Home</a></li>
-              <li><a>Product</a></li>
-              <li><a>Accessories</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="enovowheel/Products/4*4">Product</a></li>
+              <li><a href="/accessories">Accessories</a></li>
               <li><a>Dealers</a></li>
               <li><a>Blog</a></li>
             </ul>
@@ -25,7 +25,7 @@ const Footer = () => {
             <ul>
               <li><a>Login</a></li>
               <li><a>Register</a></li>
-              <li><a>Contact us</a></li>
+              <li><a href="/contact">Contact us</a></li>
               <li><a>Privacy Policy</a></li>
             </ul>
           </div>
