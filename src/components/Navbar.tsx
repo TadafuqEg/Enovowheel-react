@@ -4,7 +4,6 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import img1 from '../../puplic/assets/logo.png';
 import cart from '../../puplic/assets/Cart.png';
-// import { CustomSelect } from './customSelect';
 import user from '../../puplic/assets/User.png';
 import orders from '../../puplic/assets/Order.png';
 import address from '../../puplic/assets/ph_address-book-thin.png';
@@ -32,17 +31,18 @@ const navItems = [
 ];
 
 const options = [
-  { id: '1', label: 'user', value: 'user', image: user },
-  { id: '2', label: 'orders', value: 'orders', image: orders },
-  { id: '3', label: 'address', value: 'address', image: address },
+  { id: '1', label: 'Profile', value: 'user', image: user },
+  { id: '2', label: 'Orders', value: 'orders', image: orders },
+  { id: '3', label: 'Address', value: 'address', image: address },
   { id: '4', label: 'payment', value: 'payments', image: payment },
-  { id: '5', label: 'returns', value: 'returns', image: returns },
-  { id: '6', label: 'help', value: 'help', image: help },
+  { id: '5', label: 'Returns', value: 'returns', image: returns },
+  { id: '6', label: 'Need help', value: 'help', image: help },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<{ name: string; image: string } | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -52,9 +52,9 @@ const Navbar = () => {
     return productSubPaths.some((path) => location.pathname.startsWith(path));
   };
 
-  const handleSelect = (option: typeof options[0]) => {
+  const handleUserMenuSelect = (option: typeof options[0]) => {
     navigate(`/${option.value}`);
-    setIsOpen(false);
+    setUserMenuOpen(false);
   };
 
   return (
@@ -70,7 +70,7 @@ const Navbar = () => {
               transition={{ duration: 0.5 }}
             >
               <a href="/">
-                <img src={img1} className='logo' alt="logo" style={{ width: '80px', height: '34px' }} />
+                <img src={img1} className="logo" alt="logo" style={{ width: '80px', height: '34px' }} />
               </a>
             </motion.h1>
           </div>
@@ -125,7 +125,7 @@ const Navbar = () => {
                           to={sub.path}
                           className="sel-item flex items-center"
                           onClick={() => {
-                            setSelectedItem({ name: item.name, image: "" });
+                            setSelectedItem({ name: item.name, image: '' });
                             setDropdownOpen(false);
                           }}
                         >
@@ -139,23 +139,54 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Contact and Cart */}
-          <div className="contact-us flex items-center">
-            <motion.h1
-              className="text-2xl font-bold text-indigo-600"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="et flex items-center gap-4">
-                {/* <CustomSelect options={options} onSelect={handleSelect} placeholder="" /> */}
-                <img className='' src={cart} alt="cart" style={{ width: '32px', height: '32px' }} />
-              </div>
-            </motion.h1>
+          {/* Contact and Cart + Static User Dropdown */}
+          <div className="contact-us flex items-center gap-4 relative">
+            
+
+            {/* Static dropdown menu */}
+            <div className="relative">
+              <button
+                onClick={() => setUserMenuOpen(!userMenuOpen)}
+                className="flex items-center sec-select"
+              >
+                <img src={user} alt="user" className="sel-img" />
+                <ChevronDown size={22} style={{color:"#E9E9E9"}} />
+              </button>
+              <AnimatePresence>
+                {userMenuOpen && (
+                  <motion.ul
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.2 }}
+                    className="sel-menu absolute right-0 mt-5 w-40 border rounded-md shadow-lg z-20"
+                  >
+                    {options.map((option) => (
+                      <li
+                        key={option.id}
+                        className="mm flex items-center px-4 py-2 cursor-pointer"
+                        onClick={() => handleUserMenuSelect(option)}
+                      >
+                        <img src={option.image} alt={option.label} className="w-6 h-6 mr-2" />
+                        {option.label}
+                      </li>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
+
+
+
+
+
+            <img
+              className="cursor-pointer"
+              src={cart}
+              alt="cart"
+              style={{ width: '32px', height: '32px' }}
+            />
           </div>
-
-
-          
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
@@ -221,13 +252,13 @@ const Navbar = () => {
                                 to={sub.path}
                                 className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-indigo-100"
                                 onClick={() => {
-                                  setSelectedItem({ name: item.name, image: "" });
+                                  setSelectedItem({ name: item.name, image: '' });
                                   setIsOpen(false);
                                   setDropdownOpen(false);
                                 }}
                               >
                                 <img src={sub.image} className="w-5 h-5 rounded-full" />
-                                <span>{item.name}</span> {/* Display both image and name */}
+                                <span>{item.name}</span>
                               </NavLink>
                             ))}
                           </motion.div>

@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import img1 from '../../puplic/assets/logo.png';
 import cart from '../../puplic/assets/Cart.png';
-import { CustomSelect } from './customSelect';
+// import { CustomSelect } from './customSelect';
 import user from '../../puplic/assets/User.png';
 import orders from '../../puplic/assets/Order.png';
 import address from '../../puplic/assets/ph_address-book-thin.png';
@@ -148,7 +148,7 @@ const Navbar = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="et flex items-center gap-4">
-                <CustomSelect options={options} onSelect={handleSelect} placeholder="" />
+                {/* <CustomSelect options={options} onSelect={handleSelect} placeholder="" /> */}
                 <img className='' src={cart} alt="cart" style={{ width: '32px', height: '32px' }} />
               </div>
             </motion.h1>
