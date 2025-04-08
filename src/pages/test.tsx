@@ -1,35 +1,16 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import img1 from '../../puplic/assets/logo.png';
 import cart from '../../puplic/assets/Cart.png';
 import { CustomSelect } from './customSelect';
 import user from '../../puplic/assets/User.png';
+import orders from '../../puplic/assets/Order.png';
+import address from '../../puplic/assets/ph_address-book-thin.png';
+import payment from '../../puplic/assets/Payemnt.png';
+import returns from '../../puplic/assets/Return.png';
+import help from '../../puplic/assets/Help.png';
 import img2 from '../../puplic/assets/img15.png';
 import img3 from '../../puplic/assets/img16.png';
 import img4 from '../../puplic/assets/img17.png';
@@ -51,46 +32,30 @@ const navItems = [
 ];
 
 const options = [
-  {
-    id: '1',
-    label: 'Mountain House',
-    value: 'mountain',
-    image: user,
-  },
-  {
-    id: '2',
-    label: 'Modern Interior',
-    value: 'interior',
-    image: user,
-  },
-  {
-    id: '3',
-    label: 'Cozy Apartment',
-    value: 'apartment',
-    image: user,
-  },
+  { id: '1', label: 'user', value: 'user', image: user },
+  { id: '2', label: 'orders', value: 'orders', image: orders },
+  { id: '3', label: 'address', value: 'address', image: address },
+  { id: '4', label: 'payment', value: 'payments', image: payment },
+  { id: '5', label: 'returns', value: 'returns', image: returns },
+  { id: '6', label: 'help', value: 'help', image: help },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<{ name: string; image: string } | null>(null);
-
-  const handleSelect = (option: typeof options[0]) => {
-    // handle user select from CustomSelect if needed
-  };
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const isProductsActive = () => {
     const productSubPaths = ['/enovowheel/Products/4*4', '/enovowheel/Products/4*2'];
     return productSubPaths.some((path) => location.pathname.startsWith(path));
   };
 
-
-
-
-
-
-
+  const handleSelect = (option: typeof options[0]) => {
+    navigate(`/${option.value}`);
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed nav">
@@ -105,7 +70,7 @@ const Navbar = () => {
               transition={{ duration: 0.5 }}
             >
               <a href="/">
-                <img src={img1} alt="logo" style={{ width: '80px', height: '34px' }} />
+                <img src={img1} className='logo' alt="logo" style={{ width: '80px', height: '34px' }} />
               </a>
             </motion.h1>
           </div>
@@ -116,7 +81,7 @@ const Navbar = () => {
               <div key={item.path} className="relative">
                 {item.dropdown ? (
                   <button
-                    className="flex items-center px-3 py-2 focus:outline-none"
+                    className={`flex items-center px-3 py-2 focus:outline-none ${isProductsActive() ? 'act' : ''}`}
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                   >
                     <span className="flex items-center gap-2">
@@ -136,7 +101,9 @@ const Navbar = () => {
                 ) : (
                   <NavLink
                     to={item.path}
-                    className={({ isActive }) => `flex items-center px-3 py-2 ${isActive ? 'act' : ''}`}
+                    className={({ isActive }) =>
+                      `flex items-center px-3 py-2 ${isActive ? 'act' : ''}`
+                    }
                   >
                     {item.name}
                   </NavLink>
@@ -158,12 +125,11 @@ const Navbar = () => {
                           to={sub.path}
                           className="sel-item flex items-center"
                           onClick={() => {
-                            setSelectedItem({ name: sub.name, image: "" });
+                            setSelectedItem({ name: item.name, image: "" });
                             setDropdownOpen(false);
                           }}
                         >
-                          <img src={sub.image}  className="w-6 h-6 rounded-full" />
-                          {/* <span>{sub.name}</span> */}
+                          <img src={sub.image} className="w-6 h-6 rounded-full" />
                         </NavLink>
                       ))}
                     </motion.div>
@@ -181,12 +147,15 @@ const Navbar = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex items-center gap-4">
+              <div className="et flex items-center gap-4">
                 <CustomSelect options={options} onSelect={handleSelect} placeholder="" />
-                <img src={cart} alt="cart" style={{ width: '32px', height: '32px' }} />
+                <img className='' src={cart} alt="cart" style={{ width: '32px', height: '32px' }} />
               </div>
             </motion.h1>
           </div>
+
+
+          
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
@@ -221,7 +190,7 @@ const Navbar = () => {
                   {item.dropdown ? (
                     <div>
                       <button
-                        className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-indigo-50 flex justify-between items-center"
+                        className={`w-full text-left px-3 py-2 rounded-md text-base font-medium flex justify-between items-center ${isProductsActive() ? 'text-indigo-600 bg-indigo-50' : 'text-gray-600 hover:bg-indigo-50'}`}
                         onClick={() => setDropdownOpen(!dropdownOpen)}
                       >
                         <span className="flex items-center gap-2">
@@ -252,13 +221,13 @@ const Navbar = () => {
                                 to={sub.path}
                                 className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-indigo-100"
                                 onClick={() => {
-                                  setSelectedItem({ name: sub.name, image: "" });
+                                  setSelectedItem({ name: item.name, image: "" });
                                   setIsOpen(false);
                                   setDropdownOpen(false);
                                 }}
                               >
                                 <img src={sub.image} className="w-5 h-5 rounded-full" />
-                                {/* <span>{sub.name}</span> */}
+                                <span>{item.name}</span> {/* Display both image and name */}
                               </NavLink>
                             ))}
                           </motion.div>
@@ -270,8 +239,7 @@ const Navbar = () => {
                       to={item.path}
                       onClick={() => setIsOpen(false)}
                       className={({ isActive }) =>
-                        `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'text-indigo-600 bg-indigo-50' : 'text-gray-600 hover:bg-indigo-50'
-                        }`
+                        `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'text-indigo-600 bg-indigo-50' : 'text-gray-600 hover:bg-indigo-50'}`
                       }
                     >
                       {item.name}

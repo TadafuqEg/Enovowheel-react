@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Navigate, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -25,6 +25,7 @@ function App() {
             <AnimatePresence mode="wait">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="*" element={<Navigate to="/" />} />
                 <Route path="/enovowheel/Products/4*4" element={<Produxt4 />} />
                 <Route path="/enovowheel/Products/4*2" element={<Produxt2 />} />
                 <Route path="/accessories" element={<Accessories />} />

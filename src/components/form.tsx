@@ -118,7 +118,7 @@ const From: React.FC = () => {
           <input
             type="tel"
             placeholder="Phone Number"
-            className="flex-1 p-3 bg-[#101010] rounded-md border border-gray-800 text-white placeholder-gray-500"
+            className="ya flex-1 p-3 bg-[#101010] rounded-md border border-gray-800 text-white placeholder-gray-500"
           />
         </div>
 

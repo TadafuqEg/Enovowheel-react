@@ -5,7 +5,7 @@ import img3 from '../../puplic/assets/Vector.png'
 import img4 from '../../puplic/assets/arrow-2.png'
 import video from '../../puplic/assets/Adam movie 2.mp4'
 import img5 from '../../puplic/assets/img4.png'
-import img6 from '../../puplic/assets/img8.png'
+import img6 from '../../puplic/assets/img29.png'
 import img7 from '../../puplic/assets/img14.png'
 import img8 from '../../puplic/assets/img12.png'
 import Cursor from "../components/owlCurosel"
