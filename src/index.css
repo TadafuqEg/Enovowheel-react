@@ -83,18 +83,18 @@ body {
 .sel {
     position: absolute;
     top: 55px;
-    left: -300%;
+    left: -200%;
     background-color: #101010 !important;
     border: none;
     border-radius: 12px;
     overflow: hidden;
-    width: 1000% !important;
+    width: 666.66% !important;
     height: auto;
     gap: 20px;
 }
 
 .sel a {
-    width: 33.333%;
+    width: 50%;
     border-radius: 0;
 }
 
@@ -141,6 +141,9 @@ body {
 .contact-us a:hover {
     gap: 10px;
     transition: .2s all ease;
+}
+.contact-form{
+    padding-top: 35px;
 }
 
 .home {
@@ -200,9 +203,8 @@ body {
 }
 
 .nn {
-    margin-left: 20px !important;
-    width: 730px;
-    height: 1200px !important;
+    margin-top: -30px !important;
+    /* height: 1200px !important; */
 }
 
 .buttons {
@@ -350,17 +352,20 @@ body {
 .sec4-bottom {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    justify-content: space-between;
     /* align-items: center;
     justify-content: center; */
 }
 
 .card-1 {
-    width: 25%;
+    width: 48%;
 }
 
 .card-img {
     width: 100%;
+    height: 450px;
 }
 
 .bottom-flex {
@@ -383,13 +388,15 @@ body {
 
 .flex-right {
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     background-color: #428F91;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .flex-right img {
+    width: 30px;
+    height: 30px;
     transform: scale(.9);
 }
 
@@ -1184,10 +1191,11 @@ body {
 }
 
 .form {
-    width: 45%;
+    width: 47%;
     background: #101010;
     border-radius: 0;
-    padding: 30px 20px;
+    padding: 30px 30px;
+    border-radius: 16px;
 }
 
 .form input {
@@ -1915,6 +1923,9 @@ body {
     .shoping-product {
         height: auto !important;
         padding-bottom: 20px !important;
+    }
+    .flex-right{
+        margin-top: 10px;
     }
 }
 

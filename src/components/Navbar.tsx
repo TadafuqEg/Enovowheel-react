@@ -22,7 +22,7 @@ const navItems = [
     dropdown: true,
     subItems: [
       { path:'/enovowheel/Products/4*4',title:"prouduct 1", image: img2 },
-      { path: '/enovowheel/Products/4*2',tittle:"prouduct 1", image: img3 },
+      // { path: '/enovowheel/Products/4*2',tittle:"prouduct 1", image: img3 },
       { path: '/accessories', tittle:"Accessories", image: img4 },
     ],
   },

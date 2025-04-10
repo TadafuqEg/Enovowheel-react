@@ -14,6 +14,7 @@ import Claims from './pages/Profile/Claims';
 import Address from './pages/Profile/Address';
 import Setting from './pages/Profile/Setting';
 import Shopping from './pages/Shopping';
+import ScrollToTop from './components/ScrollTop';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Navbar />
           <main className="x">
             <AnimatePresence mode="wait">
+            <ScrollToTop />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="*" element={<Navigate to="/" />} />

@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <div className='contact'>
 
-      <div className="contact-sec-1">
+      {/* <div className="contact-sec-1">
         <img className="contact-img1" src={img11} />
         <img className="contact-img2" src={img9} />
         <div className="contact-wheel">
@@ -21,7 +21,7 @@ const Contact = () => {
           <p>Optimize your trip time</p>
           <a href='/shopping'><button><img src={img7} />Order Now</button></a>
         </div>
-      </div>
+      </div> */}
 
       <div className="contact-form">
         <Form />
@@ -29,7 +29,7 @@ const Contact = () => {
 
 
       {/* sec-6 */}
-      <div className="sec-6">
+      {/* <div className="sec-6">
         <div className='sec3-top'>
           <div>
             <h5>Build Your Scooters</h5>
@@ -40,7 +40,7 @@ const Contact = () => {
         <div>
           <Tabs />
         </div>
-      </div>
+      </div> */}
 
       {/* sec-7 */}
       <div className="sec-7">
