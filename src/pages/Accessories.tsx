@@ -46,7 +46,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Tow connection - (Attaches to a Primary connection or Seat Holder)</h5>
-                                <p className='price'>$70.00</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -58,7 +58,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Sport Seat (Attaches to Seat holder set)</h5>
-                                <p className='price'>$52.50</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -70,7 +70,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Seat Holder + Primary connection</h5>
-                                <p className='price'>$210</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -82,7 +82,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Primary connection</h5>
-                                <p className='price'>$210</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -94,7 +94,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Off Road Tire</h5>
-                                <p className='price'>$59.00</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -106,7 +106,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Golf Bag Holder (Attaches to Seat holder set or a Primary connection)</h5>
-                                <p className='price'>$360.00</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -118,7 +118,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Full Seat (Attaches to Seat holder set)</h5>
-                                <p className='price'>$157,50</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -130,7 +130,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Box Holder + Primary connection</h5>
-                                <p className='price'>$287.00</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -142,7 +142,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Back Rack (Attaches to Seat holder set)</h5>
-                                <p className='price'>$217,00</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />
@@ -154,7 +154,7 @@ const Accessories = () => {
                         <div className='bottom-flex'>
                             <div className='flex-left-2'>
                                 <h5>Great Outdoor Rack (Attaches to Seat holder set or a Primary connection)</h5>
-                                <p className='price'>$360,00</p>
+                                <p className='price plus-price'>Stay tuned</p>
                             </div>
                             <div className='flex-right-2'>
                                 <img src={img6} />

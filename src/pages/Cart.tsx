@@ -25,7 +25,7 @@ const Cart = () => {
                     </div>
                 </div>
                 <div className='sec4-bottom'>
-                    <div className='card-1'>
+                    {/* <div className='card-1'>
                         <img className='card-img' src={img5} />
                         <div className='bottom-flex'>
                             <div className='flex-left'>
@@ -72,13 +72,13 @@ const Cart = () => {
                                 <img src={img6} />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
 
             <div className='sec-4 bot-cards'>
-                <div className='sec3-top'>
+                {/* <div className='sec3-top'>
                     <div>
                         <h5>Bestsellers for you</h5>
                         
@@ -134,7 +134,7 @@ const Cart = () => {
                         </div>
                     </div>
 
-                </div>
+                </div> */}
             </div>
             {/* sec-8 */}
             <div className="sec-8">

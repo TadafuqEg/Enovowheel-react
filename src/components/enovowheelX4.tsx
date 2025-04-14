@@ -21,8 +21,8 @@ const data = {
             "*** Top Speed ***\n"
         ],
         speedNote: "Although the unit can go 45+MPH, by law we are limiting it to 25 MPH.",
-        price: "$1,500",
-        oldPrice: "$2,500",
+        price: "Stay tuned",
+        oldPrice: "Stay tuned",
         images: [img1, img2, img3, img4, img5, img6, img7, img8]
     },
     x2: {
@@ -85,8 +85,8 @@ const EnovoFour: React.FC = () => {
                     </p>
 
                     <div className="pric flex items-end gap-3">
-                        <span className="price">{model.price}</span>
-                        <span className="old-price">{model.oldPrice}</span>
+                        <span className="price plus-price">{model.price}</span>
+                        {/* <span className="old-price">{model.oldPrice}</span> */}
                     </div>
 
                     <div className="flex gap-6 mt-4">

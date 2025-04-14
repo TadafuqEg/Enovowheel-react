@@ -58,7 +58,7 @@ const ProductCard: React.FC<ProductCardProps> = () => {
         <div className="shoping-product">
             <div className="product-x-price">
                 <h5>Enovowheel x2</h5>
-                <h4>1,500$</h4>
+                <h4>Stay tuned</h4>
             </div>
 
             <div className="details-right bg-white p-6 w-full max-w-xl">

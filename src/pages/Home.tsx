@@ -61,7 +61,7 @@ const Home = () => {
       <div className='sec-3'>
         <div className='sec3-top'>
           <h5>Revolution Stable and Safety <br /> Mobility</h5>
-          <a href='/shopping'><button className='btn-3'><img src={img4} />explore more</button></a>
+          <a href='/enovowheel/Products/4*4'><button className='btn-3'><img src={img4} />explore more</button></a>
         </div>
         <Cursor />
       </div>
@@ -73,7 +73,7 @@ const Home = () => {
             <h5>Our Products</h5>
             {/* <p>Lorem ipsum dolor sit amet consectetur. Massa elit tortor ornare diam vel .</p> */}
           </div>
-          <a href='/shopping'><button className='btn-3'><img src={img4} />explore more</button></a>
+          <a href='/enovowheel/Products/4*4'><button className='btn-3'><img src={img4} />explore more</button></a>
         </div>
         <div className='sec4-bottom'>
           <div className='card-1'>
@@ -81,7 +81,7 @@ const Home = () => {
             <div className='bottom-flex'>
               <div className='flex-left'>
                 <h5>Product Name</h5>
-                <p className='home-price'>$8,639</p>
+                <p className='home-price'>Stay tuned</p>
               </div>
               <div className='flex-right'>
                 <img src={img6} />
@@ -93,7 +93,7 @@ const Home = () => {
             <div className='bottom-flex'>
               <div className='flex-left'>
                 <h5>Product Name</h5>
-                <p className='home-price'>$8,639</p>
+                <p className='home-price'>Stay tuned</p>
               </div>
               <div className='flex-right'>
                 <img src={img6} />
@@ -105,7 +105,7 @@ const Home = () => {
             <div className='bottom-flex'>
               <div className='flex-left'>
                 <h5>Product Name</h5>
-                <p className='home-price'>$8,639</p>
+                <p className='home-price'>Stay tuned</p>
               </div>
               <div className='flex-right'>
                 <img src={img6} />
@@ -117,7 +117,7 @@ const Home = () => {
             <div className='bottom-flex'>
               <div className='flex-left'>
                 <h5>Product Name</h5>
-                <p className='home-price'>$8,639</p>
+                <p className='home-price'>Stay tuned</p>
               </div>
               <div className='flex-right'>
                 <img src={img6} />
@@ -140,7 +140,7 @@ const Home = () => {
             <h5>Build Your Scooters</h5>
             <p className='sc-p'>By using accessories, you can build a scooter according to the use that suits you</p>
           </div>
-          <a href='/shopping'><button className='btn-3'><img src={img4} />explore more</button></a>
+          <a href='/accessories'><button className='btn-3'><img src={img4} />explore more</button></a>
         </div>
         <div>
           {/* <Tabs /> */}
